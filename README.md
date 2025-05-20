@@ -9,34 +9,33 @@
 a. Penjelasan Fitur:
 Petugas gudang harus dapat dengan mudah mengisi formulir untuk mencatat barang masuk ke gudang, termasuk informasi seperti nama barang, jumlah, dan waktu masuk.
 b. Acceptance Criteria:
-- Petugas dapat mengisi nama barang, jumlah barang, dan tanggal masuk.
+- Petugas dapat mengisi nama barang dan jumlah barang
 - Semua field harus muncul dengan label yang jelas.
 - Form dapat disubmit tanpa error jika semua field valid.
 - Setelah disubmit, data tercatat dan muncul di daftar barang masuk.
-- Halaman tidak mengalami reload saat form disubmit.
+
 2. Fitur 2: Validasi Input
 a. Penjelasan Fitur:
 - Untuk mencegah kesalahan pencatatan, sistem perlu mengecek apakah input valid (misalnya nama tidak kosong, jumlah adalah angka positif).
 b. Acceptance Criteria:
 - Jika nama barang kosong, muncul pesan error "Nama barang wajib diisi."
 - Jika jumlah bukan angka positif, muncul pesan error "Jumlah harus lebih dari 0."
-- Form tidak dapat disubmit sebelum semua validasi terpenuhi.
-- Validasi dilakukan secara real-time atau sebelum data dikirim ke backend.
-3. Fitur 3: Tampilan Daftar Barang Masuk
+- Form menampilkan pesan error sebelum semua validasi terpenuhi.
+
 a. Penjelasan Fitur:
 - Petugas dapat melihat daftar barang yang sudah berhasil dicatat, sebagai bentuk konfirmasi dan pelacakan stok terkini.
 b. Acceptance Criteria:
 - Daftar barang masuk ditampilkan dalam tabel atau list.
-- Data mencakup minimal: nama barang, jumlah, dan tanggal masuk.
-- Data terbaru muncul paling atas (urut berdasarkan waktu).
-- Jika tidak ada data, muncul pesan "Belum ada barang masuk."
+- Data mencakup minimal: nama barang, dan jumlah
+- Data terbaru muncul paling atas
+
 4. Fitur 4: Persistensi Data di Backend
 a. Penjelasan Fitur:
 - Data barang masuk harus disimpan di database, agar tidak hilang walaupun halaman di-refresh atau aplikasi dimuat ulang.
 b. Acceptance Criteria:
 - Setelah form dikirim, data disimpan di database (bisa dicek lewat endpoint atau Postman).
 - Jika aplikasi dimuat ulang, data tetap muncul di daftar barang masuk.
-- Endpoint /items atau sejenisnya mengembalikan data yang telah disimpan.
+- Endpoint /barang atau sejenisnya mengembalikan data yang telah disimpan.
 
 --- Screenshot hasil API Test ---
 https://drive.google.com/drive/folders/1BEdekOiXvSRLYRp8WJV4cFRy6LhNr-N8?usp=sharing
