@@ -13,4 +13,6 @@ router.get('/latest', BarangController.getLatest);
 // GET /api/barang-masuk - Mendapatkan semua barang masuk dengan pagination
 router.get('/', BarangController.getAll);
 
+router.post('/add', BarangController.addQuantity);
+
 module.exports = router;

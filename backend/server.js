@@ -1,6 +1,6 @@
 // server.js
 const app = require('./app');
-const sequelize = require('./config/database');
+const sequelize = require('./src/config/database');
 
 const PORT = process.env.PORT || 3000;
 
@@ -26,3 +26,5 @@ async function startServer() {
     process.exit(1);
   }
 }
+
+startServer();
